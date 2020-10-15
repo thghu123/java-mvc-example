@@ -1,0 +1,13 @@
+127.0.0.1 - - [16/Oct/2020:09:06:05 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:09:06:07 +0900] "GET /1014_BBS_MVC/Controller HTTP/1.1" 200 5981
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:09:06:10 +0900] "GET /1014_BBS_MVC/Controller?type=write HTTP/1.1" 200 2398
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:09:06:31 +0900] "POST /1014_BBS_MVC/Controller?type=write HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:09:06:31 +0900] "GET /1014_BBS_MVC/Controller HTTP/1.1" 200 5995
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:09:06:34 +0900] "GET /1014_BBS_MVC/Controller?type=view&cPage=1&b_idx=15 HTTP/1.1" 200 3121
+127.0.0.1 - - [16/Oct/2020:15:11:21 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:24 +0900] "GET /0929_shop/product_list.jsp HTTP/1.1" 500 10744
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:45 +0900] "GET /0929_shop/shop.jsp HTTP/1.1" 200 1817
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:46 +0900] "GET /0929_shop/product_list.jsp?category=sp003 HTTP/1.1" 200 3055
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:46 +0900] "GET /0929_shop/images/pds1.jpg HTTP/1.1" 200 8120
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:50 +0900] "GET /0929_shop/product_content.jsp?prod_num=RC-113 HTTP/1.1" 200 3071
+0:0:0:0:0:0:0:1 - - [16/Oct/2020:15:11:50 +0900] "GET /0929_shop/images/pds1_z.jpg HTTP/1.1" 200 33331

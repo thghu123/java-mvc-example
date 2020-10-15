@@ -1,0 +1,27 @@
+package bbs.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ListAction implements Action {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		//사용자가 선택한 페이지 번호를 받아야한다. DAO를 실행시켜야하니까 , 페이지 안넘기면 첫페이지
+		String cPage = request.getParameter("cPage");
+		if(cPage != null) {
+			
+			
+		}else {
+			
+			
+		}
+		
+		
+		
+		
+		return null;
+	}
+
+}

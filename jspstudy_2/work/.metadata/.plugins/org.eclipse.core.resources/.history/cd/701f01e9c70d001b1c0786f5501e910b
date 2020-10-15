@@ -1,0 +1,20 @@
+package mybatis.vo;
+
+import java.util.List;
+
+public class BbsVO {
+	private String b_idx,
+	subject ,
+	writer,	
+	content ,
+	file_name ,
+	write_date ,
+	ip ,
+	hit,
+	status,
+	bname;
+	
+	private List<CommVO> c_list;
+	
+	//댓글을 여러개 달 수 있기 때문에
+}

@@ -1,0 +1,5 @@
+package bbs.action;
+
+public interface Action {
+
+}

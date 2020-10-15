@@ -1,0 +1,18 @@
+package bbs.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class viewAction implements Action {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		//파라미터 값들 받기
+		String cPage = request.getParameter("cPage");
+		
+		
+		
+		return null;
+	}
+
+}

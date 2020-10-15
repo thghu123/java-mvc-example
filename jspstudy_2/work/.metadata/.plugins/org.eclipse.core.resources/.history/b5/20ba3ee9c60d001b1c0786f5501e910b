@@ -1,0 +1,16 @@
+package mybatis.vo;
+
+public class CommVO {
+	//comment_t라는 테이블의 저장된 각 레코드를 객체화시키는 클래스다
+	c_idx
+	
+	writer 
+	
+	content
+		
+	write_date 
+	
+	ip 
+	
+	b_idx
+}

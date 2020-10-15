@@ -1,0 +1,27 @@
+package bbs.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class writeAction implements Action {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		String viewPath = "/bbs/write.jsp";
+		
+		//현재 영역은 get방식으로 요청되었을 때는 write.jsp로 페이지 이동
+		//그게 아니라 post 방식이면서 파일 첨부가 되었다면 파라미터들을 받아서
+		//DB에 저장해야합니다.
+		
+		String method = request.getMethod();
+		if(!method.equalsIgnoreCase("get")) { //get이 대문자로 넘어온다
+			//파라미터 받아서 DB작업을 하자. 
+			
+		}
+		
+		
+		return viewPath;
+	}
+
+}
