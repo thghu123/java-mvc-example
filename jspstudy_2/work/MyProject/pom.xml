@@ -116,6 +116,11 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>       
+		
+		<!-- spring-jdbc / spring-tx/ commons-logging, commons-dbcp/
+		commons-pool, mabatis, mabaSpring, jackson-json표기법으로 사용하려고 -->
+		
+		
 		<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-jdbc</artifactId>

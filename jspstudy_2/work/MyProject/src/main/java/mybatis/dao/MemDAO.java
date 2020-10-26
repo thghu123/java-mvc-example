@@ -6,14 +6,20 @@ import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import mybatis.vo.MemberVO;
 
+@Component
 public class MemDAO {
 	@Autowired
 	private SqlSessionTemplate sst;
 
 	//회원 목록
+	/*
+	 * public MemDAO(){ System.out.println("memDAO!!!"); }
+	 */
+	
 	public MemberVO[] getAll() {
 		MemberVO[] ar = null;
 		//mapper을 호출해서 받아오는 과정 selectOne처럼 jsp와 똑같다.

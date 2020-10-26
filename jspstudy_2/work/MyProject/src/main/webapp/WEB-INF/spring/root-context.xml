@@ -45,7 +45,7 @@
 		 </bean>
 		
 		<!-- DAO를 만들어보자 -->
-		<bean id = "memDao" class="mybatis.dao.MemDAO"/>
+		<!-- <bean id = "memDao" class="mybatis.dao.MemDAO"/> -->
 		<!-- 많은 양의 dao는 mybatis.dao에만 넣고 component scan연결을 한다 그러면 전체를 다 지정할 수 있다.
 			@controller 를 반드시 쓰듯이 뭔가를 써야 자동으로 만들어지는 데
 			DAO에는 아무것도 안 써있으니까 componentscan은 지정을 안해줬으니까 안되는 것이다.
@@ -53,6 +53,6 @@
 			클래스를 컴포넌트로 @하면 되는 것을 확인하자-->
 			
 		<!-- 이게 언제 만들었는 지 알고 싶을 떄 DAO에 생성자 하나 만들면된다. DAO로 가자 -->	
-		
+		<context:component-scan base-package="mybatis.dao"/>
 		
 </beans>

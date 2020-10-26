@@ -23,12 +23,12 @@ public class IndexController {
 		return "index"; //views/index.jsp를 의미
 	}
 	
+	/*이를 멤버 컨트롤러에 정의
 	@RequestMapping("/login")
 	public String login() {
 		return "login";
 	}
 	
-
 	@RequestMapping(value = "/login", method=RequestMethod.POST)//포스트 방식으로 했을 경우에만 여기 들어온다
 	public ModelAndView login(MemberVO vo) { //인자를 넣으면 중복되도된다. 오버라이딩
 		//이름 명칭 중복이 가능하다.
@@ -51,13 +51,14 @@ public class IndexController {
 		}
 		//System.out.println(mvo);
 		mv.addObject("login_chk",false);
-		/* mv.addObject("uvo",null); */
+		// mv.addObject("uvo",null); 
 		mv.setViewName("index");
 		//System.out.println(mvo);
 		
 		return mv;
 	}
-	
+	*/
+	/*
 	@RequestMapping("/logout")
 	public ModelAndView logout() { 
 		ModelAndView mv = new ModelAndView();
@@ -65,5 +66,6 @@ public class IndexController {
 		mv.setViewName("index");
 		return mv;
 	}
+	*/
 	
 }

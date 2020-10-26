@@ -29,12 +29,17 @@ img는 우클릭해서 다른 이름으로 저장할 수 있다. -->
 					<!-- 상단영역 -->
 					<div id = "header">
 							<div class = "txt_right">
-								<c:if test="${!login_chk}"> <!-- false일때 로그인이 떠야하므로/ if문은 불변 -->
+								<c:if test="${sessionScope.mvo == null}"> <!-- false일때 로그인이 떠야하므로/ if문은 불변 -->
 									<span><a href="login">로그인</a></span>
 								</c:if>	
 								
-								<c:if test = "${login_chk}">
-									<span><a href="logout">로그아웃</a></span>
+								<%-- <c:if test = "${login_chk}"> --%>
+								<c:if test="${sessionScope.mvo != null}"> 
+								<!-- 	<span><a href="logout">로그아웃</a></span> -->
+									 <span><a href = "" id = "logout_btn">로그아웃</a></span> 
+									 
+<!-- 									 <span><a href="javascript:location.href='logout'">로그아웃</a></span>  -->
+								<!-- 	<span><a href="logout">로그아웃</a></span> -->
 								</c:if>
 							</div>
 						
@@ -294,16 +299,41 @@ img는 우클릭해서 다른 이름으로 저장할 수 있다. -->
 	<form action = "Controller" method = "post" name = "frm">
 		<input type = "hidden" name = "type"/>
 	</form> <!-- 이안에 logout을 집어 넣어주고 보내면 끝 -->
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	
-	function logout(){
+	$(function(){
+		
+		$("#logout_btn").bind("click",function(){
+			$.ajax({
+				url :"logout",
+				type : "get",
+				dataType : "json"
+			}).done(function(data){
+				console.log("data.res:"+data.res);
+				
+				if(data.res=="0"){
+					alert("정상적으로 로그아웃이 처리되었습니다.")
+					location.href = "/"
+					
+				}
+				
+			});
+			
+		});
+		
+	});
+	
+	
+	
+	
+/* 	function logout(){
 		//현재 문서에 이름이 frm 인 폼을 찾아내 type에 logout 넣고 보낸다
 		document.frm.type.value = "logout";
 		//logout이 안으로 들어간다.
 		document.frm.submit();
 	}
-	
+	 */
 	
 	</script>
 
