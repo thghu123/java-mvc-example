@@ -1,8 +1,0 @@
-package bbs.action;
-
-public interface Action {
-	//list action이 아니라 
-	
-	
-	
-}

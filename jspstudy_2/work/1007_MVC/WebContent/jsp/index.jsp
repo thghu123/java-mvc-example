@@ -11,6 +11,8 @@
 
 <!-- 외부 css 파일 연결 -->
 <link type = "text/css" rel="stylesheet" href="css/common.css"/>
+<link type = "text/css" rel="stylesheet" href="css/main.css"/>
+<!-- <link type = "text/css" rel="stylesheet" href="resources/css/main.images"/> -->
 <!-- 
 실행시 드래그해서 선택이 되면 img 안되면 background로 올린 것
 img는 우클릭해서 다른 이름으로 저장할 수 있다. -->
@@ -30,11 +32,11 @@ img는 우클릭해서 다른 이름으로 저장할 수 있다. -->
 					<div id = "header">
 							<div class = "txt_right">
 								<c:if test="${!login_chk}"> <!-- false일때 로그인이 떠야하므로/ if문은 불변 -->
-									<span><a href="Controller?type=login">로그인</a></span>
+									<span><a href="login">로그인</a></span>
 								</c:if>	
 								
 								<c:if test = "${login_chk}">
-									<span><a href="javascript:logout()">로그아웃</a></span>
+									<span><a href="logout">로그아웃</a></span>
 								</c:if>
 							</div>
 						

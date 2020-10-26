@@ -13,6 +13,8 @@ C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.
 \0924\src
 C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1855254844.index
 \1006_MVC\src
+C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\119650945.index
+\MyProject\src\main\java
 D:\MyStudy\MyStuudy\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3126451852.index
 \09144\src
 D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\307694110.index
@@ -29,6 +31,8 @@ C:\Users\SamSung\Desktop\jspstudy\work\.metadata\.plugins\org.eclipse.jst.jsp.co
 \09144\src
 C:\Users\SamSung\Desktop\jspstudy\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\499144918.index
 \0915\src
+C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\580123045.index
+\1021_mybatis\src\main\java
 D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2370493072.index
 \1014_BBS_MVC\src
 D:\MyStudy\MyStuudy\jspstudy\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\499144918.index
@@ -65,12 +69,14 @@ D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core
 \0924\src
 C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2370493072.index
 \1014_BBS_MVC\src
-D:\MyStudy\MyStuudy\jspstudy\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3595624875.index
-\0916\src
-C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3551910381.index
-\0925_Async\src
 C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2837472765.index
 \1019\src\main\java
+C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3551910381.index
+\0925_Async\src
+D:\MyStudy\MyStuudy\jspstudy\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3595624875.index
+\0916\src
+C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\434619163.index
+\1020\src\main\java
 C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1784580646.index
 \0916\src
 D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2189158385.index
