@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import bbs.util.Paging;
 import mybatis.dao.MemDAO;
 import mybatis.vo.MemberVO;
 
@@ -35,6 +36,8 @@ public class MemberController {
 	public Map<String, Object> login(String m_id, String m_pw){
 		//인자 두개를 로그인 함수를 호출하면서 전달하면 정확한 정보일 때 memvo 한개를 받게 된다
 		//인젝션으로 dao를 넣을 수 있지만 오토 와이어드가 가장 편하다
+		
+		
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		

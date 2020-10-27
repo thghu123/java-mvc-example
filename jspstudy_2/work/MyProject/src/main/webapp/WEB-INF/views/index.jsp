@@ -61,7 +61,7 @@ img는 우클릭해서 다른 이름으로 저장할 수 있다. -->
 							<li><a href = "">
 							<span class = "menu m4 ">BRAVO</span>
 							</a></li>
-							<li><a href = "">
+							<li><a href = "bbs">
 							<span class = "menu m5 ">SKT와 사회공헌</span>
 							</a></li>
 							<!-- 기존의 li 안에 a태그에 class 다는 게 아니라 span 태그 안에 지정 -->
