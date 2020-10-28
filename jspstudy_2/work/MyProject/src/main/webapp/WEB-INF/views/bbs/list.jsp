@@ -22,12 +22,12 @@ href="css/login2.css"/>
 	<!-- 상단 영역 -->
 	<div id="header">
 		<h1>SK Together</h1>
-		<ul class="gnb">
-			<li><a href=""><span class="menu m01">기브유</span></a></li>
-			<li><a href=""><span class="menu m02">위드유</span></a></li>
-			<li><a href=""><span class="menu m03">스마트 전통시장</span></a></li>
-			<li><a href=""><span class="menu m04">BRAVO!</span></a></li>
-			<li><a href=""><span class="menu m05">SKT와 사회공헌</span></a></li>
+		<ul class="gn">
+			<li><a href=""><span class="menu m1">기브유</span></a></li>
+			<li><a href=""><span class="menu m2">위드유</span></a></li>
+			<li><a href=""><span class="menu m3">스마트 전통시장</span></a></li>
+			<li><a href=""><span class="menu m4">BRAVO!</span></a></li>
+			<li><a href=""><span class="menu m5">SKT와 사회공헌</span></a></li>
 		</ul>
 	</div>
 	<!-- 상단 영역 끝 -->
@@ -50,7 +50,7 @@ href="css/login2.css"/>
 				<tfoot>
 	                      <tr>
 	                          <td colspan="4">
-	                              ${p_code }
+	                              ${p_code}
 	                          </td>
 							  <td>
 							<!-- 	<input type="button" value="글쓰기" onclick="write()"/>  이게 안돼서 비동기식 통신을 아래처럼 하기로함 -->
@@ -64,9 +64,10 @@ href="css/login2.css"/>
 				<c:if test="${ar ne null }">
 					<c:forEach var="vo" items="${requestScope.ar }" varStatus="st">
 					<tr>
-						<td>${rowTotal - st.index }</td>
+						<td>${rowTotal - st.index -((nowPage-1)*10)}</td>
 						<td style="text-align: left">
-							<a href="Controller?type=view&cPage=${nowPage }&b_idx=${vo.b_idx}">${vo.subject }</a></td>
+<%-- 							<a href="Controller?type=view&cPage=${nowPage }&b_idx=${vo.b_idx}">${vo.subject }</a></td> --%>
+							<a href="view?&cPage=${nowPage }&b_idx=${vo.b_idx}">${vo.subject }</a></td>
 						<td>${vo.writer }</td>
 						<td>
 						<c:if test="${vo.write_date ne null }">
@@ -138,6 +139,10 @@ href="css/login2.css"/>
 		
 		});
 	});
+	
+	
+	
+	
 
 /* 	function write(){
 		$.ajax({

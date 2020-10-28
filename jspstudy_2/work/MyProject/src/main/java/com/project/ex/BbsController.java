@@ -31,7 +31,7 @@ public class BbsController {
 			p = Integer.parseInt(cPage);
 		}
 
-		int rowTotal = b_dao.totalCount(bname);
+		int rowTotal = b_dao.totalCount(bname);//bbs의 전체 게시물수를 반환
 		
 		Paging page = new Paging(p, rowTotal, blockList, blockPage);
 		

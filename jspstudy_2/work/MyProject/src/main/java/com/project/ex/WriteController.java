@@ -10,6 +10,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.fileupload.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import mybatis.dao.BbsDAO;
 import mybatis.vo.BbsVO;
 import mybatis.vo.MemberVO;
+import spring.util.FileUploadUtil;
 
 @Controller
 public class WriteController {
@@ -84,6 +86,7 @@ public class WriteController {
 		return viewPath;
 		
 	}
+	
 	@RequestMapping("/write_ok")//post 방식으로 넘어오지만 다른데서 안부르면 문제없으니 그냥하자
 	//원래는 value 랑 method 지정해줘야한ㄷ
 	public ModelAndView writeOK(BbsVO vo) throws Exception{
@@ -113,11 +116,12 @@ public class WriteController {
 			//파일명얻기
 			String f_name = mf.getOriginalFilename();
 			//동일이름일때의 처리가 없다. cos는 있었지만, 디폴드파일 리네임폴리시의 수동코드를 내일 작성
-			
+		
 			//동일한 파일명이 있다면 변경해야하한다 (내일 진행)
-			
+			f_name = FileUploadUtil.checkSameFileName(f_name, path);
+			//뭐가 넘어왔다는 건은 바뀌었다는 의미 , 위 이름으로 파일을 전달할 계획이다.
+
 			//업로드를 여기서 진행한다.
-			
 			mf.transferTo(new File(path, f_name));//패런트에 패스 차일드에 파일을 넣자, 자동완성 인자에있다
 			//자바는 파일을 처리할 때 io를 쓴다 고로 오류처리를 해야하는 빨간줄 눌러서 add throw로 처리하자 2개를 익센션으로
 			// 하나로 처리하자 
@@ -127,14 +131,15 @@ public class WriteController {
 		}
 		
 		vo.setIp(request.getRemoteAddr());//ip 얻어오기
+
+		
+		MemberVO mvo = (MemberVO) session.getAttribute("mvo");
+		vo.setWriter(mvo.getM_name());
 		
 		b_dao.add(vo);
 		//자동완성을 하면 많은 인자들이 있는 데 이를 그냥 vo로 넘기고 싶다.
 		//여기서 ctrl클릭하면 add로 가는 데 아래에 그대로 내용을 복붙하고 bbsvo를 인자를 받도록
 		//오버라이드한다.
-		
-		MemberVO mvo = (MemberVO) session.getAttribute("mvo");
-		vo.setWriter(mvo.getM_name());
 		
 		mv.setViewName("redirect:/bbs");
 		//하지만 지금 넣어둔 정보가 없다. 바로 list로 가면 안된다 거기로 갱신정보가 안가기 때문이다.
@@ -146,6 +151,15 @@ public class WriteController {
 		
 	}
 	
+	/* 내풀이
+	 * @RequestMapping("/view") public ModelAndView view(String b_idx){ ModelAndView
+	 * mv = new ModelAndView();
+	 * 
+	 * BbsVO vo = b_dao.getBbs(b_idx); //System.out.println(vo);
+	 * mv.addObject("vo",vo); mv.setViewName("bbs/view");
+	 * 
+	 * return mv; }
+	 */
 	
 	
 }

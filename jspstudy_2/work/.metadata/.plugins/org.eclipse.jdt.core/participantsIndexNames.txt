@@ -81,6 +81,8 @@ C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.
 \0916\src
 D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2189158385.index
 \0921_webHard\src
+C:\Users\g\Desktop\오전부\javaMVCexample\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4208751411.index
+\MyProject\src\main\java
 D:\MyStudy\MyStuudy\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4059809353.index
 \0917\src
 D:\MyStudy\0921\0921\jspstudy_2\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2072605744.index

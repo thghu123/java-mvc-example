@@ -50,6 +50,12 @@ public class BbsDAO {
 	}
 	
 	//원글 저장 ,writer는 로그인 한 사람의 아이디가 오면 된다. 받는 게 아니라
+	public void update(BbsVO vo) {
+		
+		int cnt = sst.update("bbs.edit2",vo);
+		
+	}
+	
 	public void add(String subject, String writer, String content, String file_name, String ip, String bname) {
 		
 		Map<String, String> map = new Hashtable<String, String>();
@@ -63,8 +69,7 @@ public class BbsDAO {
 		//인자 넘어온 값을 map으로 다 받았다.
 		int cnt = sst.insert("bbs.add",map);
 		/* cnt가 1일 것이다. 하나가 들어갔으니까 */
-		if(cnt>0)sst.commit();
-		else sst.rollback();
+
 	}
 	
 	public void add(BbsVO vo) {
@@ -72,8 +77,7 @@ public class BbsDAO {
 		//인자 넘어온 값을 map으로 다 받았다.
 		int cnt = sst.insert("bbs.add2",vo);
 		/* cnt가 1일 것이다. 하나가 들어갔으니까 */
-		if(cnt>0)sst.commit();
-		else sst.rollback();
+
 	}
 	
 	
@@ -107,10 +111,8 @@ public class BbsDAO {
 		int cnt = sst.update("bbs.edit",map); //update 수정되면 수정된 레코드 수를 반환하게 되어잇다.
 		
 		if(cnt > 0) {
-			sst.commit();
+			
 			value = true;
-		}else {
-			sst.rollback();
 		}
 	
 		
@@ -118,15 +120,21 @@ public class BbsDAO {
 	}
 	
 	public void delBbs(String b_idx) {
-		
-		
 		int cnt = sst.update("bbs.del",b_idx);
-		if(cnt>0) {
-			sst.commit();
-		}else sst.rollback();
-		
-	
 	}
+	
+	//조회수를 늘리는 기능
+	public boolean updateHit(String b_idx) {
+		boolean value = false;
+		int cnt = sst.update("bbs.update_hit",b_idx);
+		
+		if(cnt>0)
+			value = true;
+		
+		return value;
+		
+	}
+	
 	
 	
 	

@@ -38,7 +38,7 @@ href="css/login2.css"/>
 		<h1 style="font-size: 30px; color : #000; margin : 30px;">SKT와 사회공헌</h1>
 		<div class="bbs_area" id="bbs">
 <!-- <form action="Controller?type=write" method="post"  -->
-<form action="write_ok" method="post" 
+<form action="edit" method="post" 
 	encType="multipart/form-data">
 	
 	
@@ -46,12 +46,15 @@ href="css/login2.css"/>
 	<input type="hidden" name ="type" value = "write"/>
 	 -->
 	 <input type="hidden" name ="bname" value = "BBS"/>
+	 <input type="hidden" name ="cPage" value = "${param.cPage }"/>
+	  <input type="hidden" name ="b_idx" value = "${sessionScope.bvo.b_idx }"/>
 		<table summary="게시판 글쓰기">
-			<caption>게시판 글쓰기</caption>
+			<caption>게시판 편집하기</caption>
 			<tbody>
 				<tr>
 					<th>제목:</th>
-					<td><input type="text" name="subject" size="45"/></td>
+					<td><input type="text" name="subject" size="45"
+					value = "${bvo.subject }"/></td>
 				</tr>
 				<!-- <tr>
 					<th>이름:</th>
@@ -60,10 +63,10 @@ href="css/login2.css"/>
 				<tr>
 					<th>내용:</th>
 					<td><textarea name="content" cols="50" 
-							rows="8"></textarea></td>
+							rows="8">${bvo.content }</textarea></td>
 				</tr>
 				<tr>
-					<th>첨부파일:</th>
+					<th>첨부파일:<c:if test = "${bvo.file_name ne null }">(${bvo.file_name })</c:if></th>
 					<td><input type="file" name="file"/></td>
 				</tr>
 <!--
@@ -146,6 +149,9 @@ href="css/login2.css"/>
 			//	document.forms[0].action = "test.jsp";
 				document.forms[0].submit();
 		}
+		
+		
+		
 
 </script>
 </body>

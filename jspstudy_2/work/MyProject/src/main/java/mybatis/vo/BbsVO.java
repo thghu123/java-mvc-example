@@ -14,9 +14,18 @@ public class BbsVO {
 	ip ,
 	hit,
 	status,
-	bname;
+	bname,
+	cPage;
 	
 	
+	public String getcPage() {
+		return cPage;
+	}
+
+	public void setcPage(String cPage) {
+		this.cPage = cPage;
+	}
+
 	private MultipartFile file;
 	
 	

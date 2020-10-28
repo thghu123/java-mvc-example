@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="logout"/>
+		<item key="selection" value="add"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="logout"/>
-			<item value="login_btn"/>
-			<item value="로그인"/>
-			<item value="sys"/>
-			<item value="ex"/>
-			<item value="4.7"/>
-			<item value="bean"/>
-			<item value="test"/>
-			<item value="type"/>
-			<item value="login"/>
-			<item value="delBbs"/>
-			<item value="del"/>
+			<item value="add"/>
+			<item value="write_btn"/>
 			<item value="글쓰기"/>
-			<item value="&lt;GlobalNamingResources&gt;"/>
-			<item value="image"/>
+			<item value="blockList, "/>
+			<item value="total"/>
+			<item value="p"/>
+			<item value="menu"/>
+			<item value="sst.clo"/>
+			<item value="ss.close()"/>
+			<item value="ss."/>
+			<item value="public static"/>
+			<item value="사회"/>
+			<item value="margin"/>
+			<item value="상단"/>
+			<item value="logout"/>
 		</list>
 		<list key="replacehistory">
+			<item value="sst."/>
+			<item value="public"/>
 			<item value=""/>
 			<item value=".."/>
 		</list>

@@ -108,6 +108,9 @@ list의 map1을 보자마자 위의 resultmap map1으로 온다 그래서 bbsVO 
  #{content},#{file_name},sysdate,#{ip},0,0,#{bname})
  </insert>
  
+
+ 
+ 
  <!-- 보기기능 -->
  <select id="getBbs" resultMap="map1" parameterType="String"> 
  <!-- resultmap을 하지 않으면 원글은 받아오지만 댓글은 보지못한다. -->
@@ -125,6 +128,18 @@ list의 map1을 보자마자 위의 resultmap map1으로 온다 그래서 bbsVO 
  	where b_idx = #{b_idx}
  	</update>
  	
+ 	<update id = "edit2" parameterType="mybatis.vo.BbsVO">
+ 	update bbs
+ 	set
+ 		subject = #{subject},
+ 		content = #{content}
+ 		<if test = "file_name != null">
+ 			,file_name = #{file_name}
+ 		</if>
+ 	where b_idx = #{b_idx}
+ 	</update>
+ 	
+ 	
  	
  	<!-- 원글 삭제 -->
  	<update id = "del" parameterType="String">
@@ -133,5 +148,18 @@ list의 map1을 보자마자 위의 resultmap map1으로 온다 그래서 bbsVO 
  	where b_idx = #{b_idx}
  	
  	</update>
+ 	
+
+ 	
+ 	
+ 	
+ 	<!-- 조회수 증가 -->
+  	<update id = "update_hit" parameterType="String">
+ 	update bbs
+ 	set hit = hit + 1 <!-- java아니러서 ++ +=1 지원안한다 -->
+ 	where b_idx = #{b_idx}
+ 	</update>
+ 	
+ 	
  
 </mapper>
