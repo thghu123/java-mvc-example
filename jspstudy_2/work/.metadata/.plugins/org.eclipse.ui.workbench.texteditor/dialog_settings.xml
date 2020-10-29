@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="add"/>
+		<item key="selection" value="vo"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="vo"/>
+			<item value="bvo"/>
+			<item value="update"/>
+			<item value="viewcontol"/>
+			<item value="viewcontoller"/>
+			<item value="viewcont"/>
+			<item value="view"/>
+			<item value="dao"/>
+			<item value="eidt"/>
+			<item value="add2"/>
 			<item value="add"/>
-			<item value="write_btn"/>
-			<item value="글쓰기"/>
-			<item value="blockList, "/>
-			<item value="total"/>
-			<item value="p"/>
-			<item value="menu"/>
-			<item value="sst.clo"/>
-			<item value="ss.close()"/>
-			<item value="ss."/>
-			<item value="public static"/>
-			<item value="사회"/>
-			<item value="margin"/>
-			<item value="상단"/>
-			<item value="logout"/>
+			<item value="throw"/>
+			<item value="path"/>
+			<item value="uploadPath"/>
+			<item value="MultipartFile mf = vo.getFile(); //그냥 통으로 뽑아 얻어낸다."/>
 		</list>
 		<list key="replacehistory">
 			<item value="sst."/>
@@ -32,8 +32,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1272"/>
-		<item key="DIALOG_Y_ORIGIN" value="274"/>
+		<item key="DIALOG_X_ORIGIN" value="672"/>
+		<item key="DIALOG_Y_ORIGIN" value="307"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

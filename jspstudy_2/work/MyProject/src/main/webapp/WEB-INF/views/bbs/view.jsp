@@ -138,6 +138,17 @@ href="css/login2.css"/>
 		document.frm.action = "edit";
 		document.frm.submit(); //이때 요청이 일어난다.
 	}
+	function fDown(fname){
+		//filedownload라는 서블릿을 호출
+		location.href = "FileDownload?dir=/resources/upload&filename="+encodeURIComponent(fname)
+		//dir은 서블릿에서 직접구현해도되지만 유동성을 부여한 것 뿐 . 한글을 받을 수 있으니 encode선언ㅇ
+		//일단 진행
+		
+		//get방식 한글처리를 하기 위해서는 톰캣의 server.xml에 
+		//connector port = "8080" protocol = "http/1.1"이런 태그가 있다.
+		//URIEncoding = "UTF-8"을 추가해야한다.
+		
+	}
 
 	</script>
 
